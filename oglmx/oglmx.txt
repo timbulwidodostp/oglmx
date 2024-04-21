@@ -19,7 +19,7 @@ authenticate(Sys.getenv("GITHUB_PAT"), ""),
 write_disk(path = temp_file))
 oglmx <- readxl::read_excel(temp_file)
 # Estimation of Ordered Generalized Linear Models
-results.oprob<-oglmx(y~x1+x2,data=dataset,link="probit",constantMEAN=FALSE,constantSD=FALSE,delta=0,threshparam=NULL)
+results.oprob<-oglmx(y~x1+x2,data=oglmx,link="probit",constantMEAN=FALSE,constantSD=FALSE,delta=0,threshparam=NULL)
 coef(results.oprob)
 summary(results.oprob)
 # Estimation of Ordered Generalized Linear Models Use Package oglmx With (In) R Software
